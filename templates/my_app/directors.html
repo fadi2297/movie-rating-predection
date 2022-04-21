@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends "my_app/base.html" %}
+{% load static %}
+  {% block body_block_title %}
+  <title>Directors</title>
+  {% endblock %}
+
+
+    {% block body_block%}
+
+    <div class="container">
+      {% if stam %}
+          <table class="table table-sm">
+            <thead>
+              <th>A List Of All The Directors That Our System Supports</th>
+            </thead>
+
+            {% for dir in stam %}
+              <tr>
+                <td>{{ dir|title }}</td>
+              </tr>
+            {% endfor %}
+        </table>
+      {% else %}
+        <p>No Access Records. Table Not Created.</p>
+      {% endif %}
+    </div>
+    {% endblock %}
