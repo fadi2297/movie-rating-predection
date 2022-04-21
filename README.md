@@ -1,4 +1,4 @@
-# movie-rating-predection
+# movie-rating-prediction
 predict a movie rating using AI algortithms
 
 Data files:
