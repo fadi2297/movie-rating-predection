@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% block body_block_title %}
+    <!-- <title>Base</title> -->
+    {% endblock %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../static/my_app/css/my_style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'index' %}">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'form' %}">The Form</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'countries' %}">Countries</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'languages' %}">Languages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'productions' %}">Production Companies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'actors' %}">Actors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'directors' %}">Directors</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="border_style">
+      {% block body_block %}
+
+      {% endblock %}
+    </div>
+
+
+  </body>
+</html>
